@@ -1,0 +1,126 @@
+{
+    "source_id": "340588778198415334",
+    "version": "1",
+    "workflow": {
+        "name": "Let's Stretch",
+        "blueprint": {
+            "version": "1",
+            "trigger": {
+                "type": "webhook",
+                "id": "a0ab1f8d-ebbf-4766-a755-ee530ea2944e",
+                "config": {
+                    "url": "",
+                    "variables": [
+                        {
+                            "type": "text",
+                            "key": "stretch",
+                            "client_id": "d7f61406-dd4b-4be5-8626-a934c67b94fb"
+                        }
+                    ],
+                    "revoked_token": false
+                }
+            },
+            "steps": [
+                {
+                    "type": "message",
+                    "id": "3cc74012-3afc-4dba-9ce1-abaa36481db9",
+                    "config": {
+                        "channel": {
+                        },
+                        "has_button": true,
+                        "button_label": "終わった！",
+                        "message_text": "ストレッチの時間です:キラキラ:\n{{a0ab1f8d-ebbf-4766-a755-ee530ea2944e==d7f61406-dd4b-4be5-8626-a934c67b94fb==text}}",
+                        "message_blocks": [
+                            {
+                                "type": "rich_text",
+                                "elements": [
+                                    {
+                                        "type": "rich_text_section",
+                                        "elements": [
+                                            {
+                                                "text": "\nストレッチの時間です",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "name": "キラキラ",
+                                                "type": "emoji"
+                                            },
+                                            {
+                                                "text": "\n",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "type": "workflowtoken",
+                                                "id": "a0ab1f8d-ebbf-4766-a755-ee530ea2944e==d7f61406-dd4b-4be5-8626-a934c67b94fb==text",
+                                                "property": "",
+                                                "data_type": "text"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "message",
+                    "id": "800bf61a-f6ce-4f69-b449-eddd7318758c",
+                    "config": {
+                        "channel": {
+                        },
+                        "has_button": false,
+                        "message_text": ":clapping: :sparkling_heart: やりましたね！:sparkling_heart: :clapping:\nまたお仕事頑張ってください:cheer:",
+                        "message_blocks": [
+                            {
+                                "type": "rich_text",
+                                "elements": [
+                                    {
+                                        "type": "rich_text_section",
+                                        "elements": [
+                                            {
+                                                "name": "clapping",
+                                                "type": "emoji"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "name": "sparkling_heart",
+                                                "type": "emoji"
+                                            },
+                                            {
+                                                "text": " やりましたね！",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "name": "sparkling_heart",
+                                                "type": "emoji"
+                                            },
+                                            {
+                                                "text": " ",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "name": "clapping",
+                                                "type": "emoji"
+                                            },
+                                            {
+                                                "text": "\nまたお仕事頑張ってください",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "name": "cheer",
+                                                "type": "emoji"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
